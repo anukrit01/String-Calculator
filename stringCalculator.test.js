@@ -11,3 +11,11 @@ test('returns the number itself for a single number', () => {
 test('returns the sum of two numbers', () => {
     expect(add("1,2")).toBe(3);
 });
+
+test('returns the sum of an unknown amount of numbers', () => {
+    expect(add("1,2,3,4")).toBe(10);
+});
+
+test('handles new lines as delimiters', () => {
+    expect(add("1\n2,3")).toBe(6);
+});

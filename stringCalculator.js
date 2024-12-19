@@ -1,7 +1,7 @@
 function add(numbers) {
     if (numbers === "") return 0;
 
-    //to add two numbers
+    //to add two or more numbers
     const nums = numbers.split(',').map(Number);
     return nums.reduce((sum, num) => sum + num, 0);
 }
