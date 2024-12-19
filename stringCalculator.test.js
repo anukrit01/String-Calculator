@@ -33,5 +33,5 @@ test('ignores numbers greater than 1000', () => {
 });
 
 test('supports delimiters of any length', () => {
-    expect(add("//[***]\n1***2***3")).toBe(0);
+    expect(add("//[***]\n1***2***3")).toBe(6);
 });
