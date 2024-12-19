@@ -31,3 +31,7 @@ test('throws an exception for negative numbers', () => {
 test('ignores numbers greater than 1000', () => {
     expect(add("2,1001")).toBe(2);
 });
+
+test('supports delimiters of any length', () => {
+    expect(add("//[***]\n1***2***3")).toBe(0);
+});
