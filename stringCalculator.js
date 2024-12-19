@@ -1,8 +1,15 @@
 function add(numbers) {
     if (numbers === "") return 0;
 
-    //updated to handle new line delimiters as well
-    const nums = numbers.split(/[\n,]/).map(Number);
+    //updated to handle different delimiters as well
+    let delimiter = /[\n,]/;
+    if (numbers.startsWith("//")) {
+        const parts = numbers.split('\n');
+        delimiter = new RegExp(parts[0].slice(2));
+        numbers = parts[1];
+    }
+
+    const nums = numbers.split(delimiter).map(Number);
     return nums.reduce((sum, num) => sum + num, 0);
 }
 
