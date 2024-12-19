@@ -1,8 +1,8 @@
 function add(numbers) {
     if (numbers === "") return 0;
 
-    //to add two or more numbers
-    const nums = numbers.split(',').map(Number);
+    //updated to handle new line delimiters as well
+    const nums = numbers.split(/[\n,]/).map(Number);
     return nums.reduce((sum, num) => sum + num, 0);
 }
 
